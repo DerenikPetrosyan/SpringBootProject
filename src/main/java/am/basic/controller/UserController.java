@@ -14,6 +14,7 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+
     @GetMapping("/{id}")
     public User getById(@PathVariable int id) {
         return userService.getById(id);
@@ -30,4 +31,5 @@ public class UserController {
         userService.editeUser(user);
         return ResponseEntity.ok().build();
     }
+
 }
